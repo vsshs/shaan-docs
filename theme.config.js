@@ -5,8 +5,7 @@ export default {
   logo: (
     <div className="bg-red-500">
       <span className="mr-2 font-extrabold hidden md:inline">Shaan Alam</span>
-      <span className="text-gray-600 font-normal hidden md:inline">
-      </span>
+      <span className="text-gray-600 font-normal hidden md:inline"></span>
     </div>
   ),
   head: (
@@ -61,6 +60,13 @@ export default {
   nextLinks: true,
   footer: true,
   footerEditLink: 'Edit this page on GitHub',
-  footerText: <>MIT {new Date().getFullYear()} © Nextra.</>,
+  footerText: (
+    <>
+      MIT {new Date().getFullYear()} ©{' '}
+      <a href="https://shaanalam.vercel.app/" target="_blank">
+        Shaan Alam.
+      </a>
+    </>
+  ),
   unstable_faviconGlyph: '👋',
 }
