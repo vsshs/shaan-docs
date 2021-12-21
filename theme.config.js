@@ -1,14 +1,13 @@
 export default {
-  github: 'https://github.com/shuding/nextra',
-  docsRepositoryBase: 'https://github.com/shuding/nextra/blob/master',
-  titleSuffix: ' – Nextra',
+  github: 'https://github.com/shaan-alam',
+  docsRepositoryBase: 'https://github.com/shaan-alam/shaan-docs',
+  titleSuffix: "– Shaan's Docs!",
   logo: (
-    <>
-      <span className="mr-2 font-extrabold hidden md:inline">Nextra</span>
+    <div className="bg-red-500">
+      <span className="mr-2 font-extrabold hidden md:inline">Shaan Alam</span>
       <span className="text-gray-600 font-normal hidden md:inline">
-        The Next.js Static Site Generator
       </span>
-    </>
+    </div>
   ),
   head: (
     <>
