@@ -177,3 +177,13 @@ html.js-focus-visible.light h6 {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+
+/* Logo CSS */
+
+html.js-focus-visible.light .logo.dark {
+  display: none;
+}
+
+html.js-focus-visible.dark .logo.light {
+  display: none;
+}
