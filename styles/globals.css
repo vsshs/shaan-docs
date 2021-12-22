@@ -1,3 +1,5 @@
+@import url('http://fonts.cdnfonts.com/css/cascadia-code');
+
 #nprogress {
   pointer-events: none;
 }
@@ -186,4 +188,8 @@ html.js-focus-visible.light .logo.dark {
 
 html.js-focus-visible.dark .logo.light {
   display: none;
+}
+
+.token-line .token {
+  font-family: 'Cascadia Code', monospace;
 }

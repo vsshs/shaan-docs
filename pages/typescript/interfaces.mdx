@@ -1,99 +1,96 @@
+import CodeSnippet from '../../components/CodeSnippet'
+
 # Interfaces & Types.
 
 Interfaces define how an object is made. In short, it defines the shape of the object.
 
-```js
+<CodeSnippet language="tsx">
+  {() => `
 interface MyInterface {
   name: string;
   age: number;
-}
-
+}\n
 function getUser(props: MyInterface) {
   // user search algorithm here...
   return user
-}
-```
+}`}
+</CodeSnippet>
 
 ## Extending an interface
 
 Interface can also be extended to another interface.
 
-```js
-interface MyInterface {
+<CodeSnippet language="tsx">
+  {() => `interface MyInterface {
   name: string;
   age: number;
 }
-
 interface MyInterfaceTwo extends MyInterface {
   city: string;
-}
-```
+}`}
+</CodeSnippet>
 
 ## Optionals in an interface
 
 We can also define a property in our interface as an optional property by putting a `?` symbol.
 
-```js
+<CodeSnippet language="tsx">
+  {() => `
 interface MyInterface {
   name: string,
   age: number
   phone?: number
-}
-```
+}`}
+</CodeSnippet>
 
 ## Functions with interface
 
 Here, the function `getUser` receives an argument of `IProps` type and returns an object of `IUser` type.
 
-```js
+<CodeSnippet language="tsx">
+  {() =>`
 interface IProps {
   userId: string;
-}
-
+}\n
 interface IUser {
-  _id: string;
+  \_id: string;
   fullName: string;
   username: string;
   avatar: string;
-}
-
+}\n
 function getUser(props: IProps): IUser {
   const user
-
   // user search algorithm here..
-
   return user
-}
-```
+}`}
+
+</CodeSnippet>
 
 # Types
 
 Types are similar to interfaces. The only difference between Types and Interfaces are that Types cannot be extended.
 
-```js
-type MyType = {
+<CodeSnippet language="tsx">
+  {() => `type MyType = {
   property: string,
 }
-
-const a: MyType = {
+\nconst a: MyType = {
   property: 'Some value',
-}
-```
-
+}`}
+</CodeSnippet>
 ## Combining Types
+
 Two types can be combined together by using `&` symbol like this.
 
-```js
-type MyType = {
+<CodeSnippet language="tsx">
+  {() => `type MyType = {
   property: string,
 }
-
-type MyTypeTwo = {
+\ntype MyTypeTwo = {
   property1: string,
 } & MyType
-
-const a: MyTypeTwo = {
+\nconst a: MyTypeTwo = {
   property: 'Some value',
   property1: 'Some value',
-}
-```
+}`}
+</CodeSnippet>
