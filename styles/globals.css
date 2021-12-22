@@ -1,4 +1,4 @@
-@import url("https://cdn.jsdelivr.net/npm/@xz/fonts@1/serve/cascadia-code.min.css");
+@import url('https://cdn.jsdelivr.net/npm/@xz/fonts@1/serve/cascadia-code.min.css');
 
 #nprogress {
   pointer-events: none;
@@ -192,4 +192,8 @@ html.js-focus-visible.dark .logo.light {
 
 .token-line .token {
   font-family: 'Cascadia Code', monospace;
+}
+
+.rounded-full {
+  border-radius: 100%;
 }

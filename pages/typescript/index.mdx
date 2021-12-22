@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import CodeSnippet from '../../components/CodeSnippet'
 
 ![Typescript](../../public/TypeScriptImage.jpeg)
 
@@ -13,34 +14,34 @@ strongly typed programming language.
 
 1. To start a TypeScript Project, first of all, install `TypeScript` and `ts-node` as a dev-dependency
 
-```bash
-yarn add typescript ts-node -D
-```
+<CodeSnippet language="console">
+  {() => `yarn add typescript ts-node -D`}
+</CodeSnippet>
 
 2. Create a `tsconfig.json` file at the root of your project and add the following configurations (Enough Config to get started).
 
-```json
-{
+<CodeSnippet language="json">
+  {() => `{
   "compilerOptions": {
     "outDir": "./dist",
     "lib": ["ESNext"],
     "esModuleInterop": true
   }
-}
-```
+}`}
+</CodeSnippet>
 
-| outDir          | Where your compiled JavaScript will be stored                                                 |
+| Property        | Function                                                                                      |
 | --------------- | --------------------------------------------------------------------------------------------- |
+| outDir          | Where your compiled JavaScript will be stored                                                 |
 | lib             | Include API's from specified versions.                                                        |
 | esModuleInterop | With flag esModuleInterop we can import CommonJS modules in compliance with es6 modules spec. |
 
 3. Inside `package.json`, add the following scripts
 
-```json
-"scripts": {
+<CodeSnippet language="json">
+  {() => `"scripts": {
   "build": "tsc",
   "dev": "ts-node app.ts"
-}
-```
-
+}`}
+</CodeSnippet>
 4. Run `yarn dev` to run your app.
