@@ -1,5 +1,5 @@
 import Highlight, { defaultProps } from 'prism-react-renderer'
-import theme from 'prism-react-renderer/themes/oceanicNext'
+import theme from 'prism-react-renderer/themes/nightOwl'
 
 
 const CodeSnippet = ({ children, language }) => {
