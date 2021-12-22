@@ -1,0 +1,46 @@
+import { RoughNotation } from 'react-rough-notation'
+import Image from 'next/image'
+
+![Typescript](../../public/TypeScriptImage.jpeg)
+
+<br />
+
+# Typescript
+Typescript is a super-set of JavaScript which provides type definitions. It is a
+strongly typed programming language.
+
+## Starting a Typescript Project
+
+1. To start a TypeScript Project, first of all, install <RoughNotation type="box" color="red" show={true}>`TypeScript` and `ts-node` as a dev-dependency</RoughNotation>.
+
+```bash
+yarn add typescript ts-node -D
+```
+
+2. Create a `tsconfig.json` file at the root of your project and add the following configurations (Enough Config to get started).
+
+```json
+{
+  "compilerOptions": {
+    "outDir": "./dist",
+    "lib": ["ESNext"],
+    "esModuleInterop": true
+  }
+}
+```
+
+| outDir          | Where your compiled JavaScript will be stored                                                 |
+| --------------- | --------------------------------------------------------------------------------------------- |
+| lib             | Include API's from specified versions.                                                        |
+| esModuleInterop | With flag esModuleInterop we can import CommonJS modules in compliance with es6 modules spec. |
+
+3. Inside `package.json`, add the following scripts
+
+```json
+"scripts": {
+  "build": "tsc",
+  "dev": "ts-node app.ts"
+}
+```
+
+4. Run `yarn dev` to run your app.
