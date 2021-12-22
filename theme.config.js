@@ -51,7 +51,6 @@ export default {
           />
         </svg>
       </span>
-      <span>Shaan Alam</span>
     </>
   ),
   head: (
