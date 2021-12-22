@@ -2,9 +2,37 @@
   pointer-events: none;
 }
 
-#nprogress .bar {
-  background: #3498db;
+html.js-focus-visible.light #nprogress .bar {
+  background: #8a2387; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #f27121,
+    #e94057,
+    #8a2387
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #f27121,
+    #e94057,
+    #8a2387
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
 
+html.js-focus-visible.dark #nprogress .bar {
+  background: #c02425; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #f0cb35,
+    #c02425
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #f0cb35,
+    #c02425
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+#nprogress .bar {
   position: fixed;
   z-index: 1031;
   top: 0;
@@ -21,12 +49,21 @@
   right: 0px;
   width: 100px;
   height: 100%;
-  box-shadow: 0 0 10px #3498db, 0 0 5px #3498db;
   opacity: 1;
 
   -webkit-transform: rotate(3deg) translate(0px, -4px);
   -ms-transform: rotate(3deg) translate(0px, -4px);
   transform: rotate(3deg) translate(0px, -4px);
+}
+
+/* fancy blur effect in light mode */
+html.js-focus-visible.light #nprogress .peg {
+  box-shadow: 0 0 20px #e94057, 0 0 5px #e94057;
+}
+
+/* fancy blur effect in dark mode */
+html.js-focus-visible.dark #nprogress .peg {
+  box-shadow: 0 0 20px #c02425, 0 0 5px #c02425;
 }
 
 /* Remove these to get rid of the spinner */
@@ -50,12 +87,22 @@
   box-sizing: border-box;
 
   border: solid 3px transparent;
-  border-top-color: #3498db;
-  border-left-color: #3498db;
   border-radius: 50%;
 
   -webkit-animation: nprogress-spinner 400ms linear infinite;
   animation: nprogress-spinner 400ms linear infinite;
+}
+
+/* Light mode spinner icon */
+html.js-focus-visible.light #nprogress .spinner-icon {
+  border-top-color: #e94057;
+  border-left-color: #e94057;
+}
+
+/* dark mode spinner icon */
+html.js-focus-visible.dark #nprogress .spinner-icon {
+  border-top-color: #f0cb35;
+  border-left-color: #f0cb35;
 }
 
 .nprogress-custom-parent {
@@ -83,4 +130,50 @@
   100% {
     transform: rotate(360deg);
   }
+}
+
+html.js-focus-visible.dark h1,
+html.js-focus-visible.dark h2,
+html.js-focus-visible.dark h3,
+html.js-focus-visible.dark h4,
+html.js-focus-visible.dark h5,
+html.js-focus-visible.dark h6 {
+  background: #c02425; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #f0cb35,
+    #c02425
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #f0cb35,
+    #c02425
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+html.js-focus-visible.light h1,
+html.js-focus-visible.light h2,
+html.js-focus-visible.light h3,
+html.js-focus-visible.light h4,
+html.js-focus-visible.light h5,
+html.js-focus-visible.light h6 {
+  background: #8a2387; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #f27121,
+    #e94057,
+    #8a2387
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #f27121,
+    #e94057,
+    #8a2387
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }

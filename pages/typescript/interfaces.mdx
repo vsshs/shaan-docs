@@ -1,8 +1,99 @@
-# Interfaces.
+# Interfaces & Types.
+
+Interfaces define how an object is made. In short, it defines the shape of the object.
 
 ```js
-import * as React from 'react'
-const [count, setCount] = React.useState(0)
+interface MyInterface {
+  name: string;
+  age: number;
+}
+
+function getUser(props: MyInterface) {
+  // user search algorithm here...
+  return user
+}
 ```
 
-## Types
+## Extending an interface
+
+Interface can also be extended to another interface.
+
+```js
+interface MyInterface {
+  name: string;
+  age: number;
+}
+
+interface MyInterfaceTwo extends MyInterface {
+  city: string;
+}
+```
+
+## Optionals in an interface
+
+We can also define a property in our interface as an optional property by putting a `?` symbol.
+
+```js
+interface MyInterface {
+  name: string,
+  age: number
+  phone?: number
+}
+```
+
+## Functions with interface
+
+Here, the function `getUser` receives an argument of `IProps` type and returns an object of `IUser` type.
+
+```js
+interface IProps {
+  userId: string;
+}
+
+interface IUser {
+  _id: string;
+  fullName: string;
+  username: string;
+  avatar: string;
+}
+
+function getUser(props: IProps): IUser {
+  const user
+
+  // user search algorithm here..
+
+  return user
+}
+```
+
+# Types
+
+Types are similar to interfaces. The only difference between Types and Interfaces are that Types cannot be extended.
+
+```js
+type MyType = {
+  property: string,
+}
+
+const a: MyType = {
+  property: 'Some value',
+}
+```
+
+## Combining Types
+Two types can be combined together by using `&` symbol like this.
+
+```js
+type MyType = {
+  property: string,
+}
+
+type MyTypeTwo = {
+  property1: string,
+} & MyType
+
+const a: MyTypeTwo = {
+  property: 'Some value',
+  property1: 'Some value',
+}
+```
