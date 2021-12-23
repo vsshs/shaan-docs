@@ -19,9 +19,32 @@ We use the same function with two different types. Generics can help us create a
 For example -
 
 <CodeSnippet language="ts">
-{() => `function myFunc<T>(input: T): T {
+  {() => `function myFunc<T>(input: T): T {
   return input
 }\n
 const result = myFunc({ name: 'Shaan Alam' }) // T { name: string }
 const result2 = myFunc({ name: ['Shaan Alam'] }) // T { name: string[]`}
+</CodeSnippet>
+
+## Creating Type-Safe Generics <span>👨‍💻</span>
+
+For creating type-sage generics, we're gonna use `<T>` parameter around functions.
+
+<CodeSnippet language="ts">
+  {() => `function fun<T>(args: T): T {
+  return args;
+}\n
+const result = fun<string>("Shaan Alam"); // fun with string type
+const result1 = fun<number>(19); // fun with number type
+const result2 = fun<boolean>(true); // fun with boolean type`}
+</CodeSnippet>
+
+## Using generics with many parameters
+
+We can also use generics with many types.
+
+<CodeSnippet language="ts">
+{() => `function fun<T, U, V>(args1:T, args2: U, args3: V): V {
+  return args3;
+}`}
 </CodeSnippet>

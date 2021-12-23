@@ -1,5 +1,6 @@
 {
   "index": "Typescript Introduction",
   "interfaces": "Interfaces & Types",
-  "generics": "Generics"
+  "generics": "Generics",
+  "utilities": "Utilities"
 }

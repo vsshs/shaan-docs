@@ -134,6 +134,23 @@ html.js-focus-visible.dark #nprogress .spinner-icon {
   }
 }
 
+/* emoji background reset */
+html.js-focus-visible.dark h1 span,
+html.js-focus-visible.dark h2 span,
+html.js-focus-visible.dark h3 span,
+html.js-focus-visible.dark h4 span,
+html.js-focus-visible.dark h5 span,
+html.js-focus-visible.dark h6 span,
+html.js-focus-visible.light h1 span,
+html.js-focus-visible.light h2 span,
+html.js-focus-visible.light h3 span,
+html.js-focus-visible.light h4 span,
+html.js-focus-visible.light h5 span,
+html.js-focus-visible.light h6 span {
+  background: transparent;
+  -webkit-text-fill-color: #fff;
+}
+
 html.js-focus-visible.dark h1,
 html.js-focus-visible.dark h2,
 html.js-focus-visible.dark h3,
