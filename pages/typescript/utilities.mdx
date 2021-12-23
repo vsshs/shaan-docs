@@ -1,3 +1,7 @@
+---
+title: Utilities
+---
+
 import CodeSnippet from '../../components/CodeSnippet'
 
 # Utilities
@@ -38,12 +42,12 @@ We can also omit some properties from an interface using `Omit` utility type.
   prop1: string,
   prop2: boolean,
   prop3: number[]
-}
+}\n
 // To omit a single property
 const object: Omit<IProps, "prop2"> = {
   prop1: "Shaan Alam",
   prop3: [21, 78]
-}
+}\n
 // To omit multiple property
 const object2: Omit<IProps, "prop2" | "prop3"> = {
   prop1: "Shaan Alam"

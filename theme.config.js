@@ -1,7 +1,7 @@
 export default {
   github: 'https://github.com/shaan-alam',
   docsRepositoryBase: 'https://github.com/shaan-alam/shaan-docs',
-  titleSuffix: '– shaan-docs',
+  titleSuffix: ' 👨‍💻',
   floatTOC: false,
   logo: (
     <>
@@ -55,19 +55,30 @@ export default {
   ),
   head: (
     <>
-      <meta name="msapplication-TileColor" content="#ffffff" />
-      <meta name="theme-color" content="#ffffff" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <meta httpEquiv="Content-Language" content="en" />
-      <meta name="description" content="Nextra: the Next.js site builder" />
-      <meta name="og:description" content="Nextra: the Next.js site builder" />
-      <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:image" content="https://nextra.vercel.app/og.png" />
-      <meta name="twitter:site:domain" content="nextra.vercel.app" />
-      <meta name="twitter:url" content="https://nextra.vercel.app" />
-      <meta name="og:title" content="Nextra: Next.js static site generator" />
-      <meta name="og:image" content="https://nextra.vercel.app/og.png" />
-      <meta name="apple-mobile-web-app-title" content="Nextra" />
+      <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png" />
+      <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png" />
+      <link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png" />
+      <link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png" />
+      <link
+        rel="apple-touch-icon"
+        sizes="114x114"
+        href="/apple-icon-114x114.png"
+      />
+      <link
+        rel="apple-touch-icon"
+        sizes="120x120"
+        href="/apple-icon-120x120.png"
+      />
+      <link
+        rel="apple-touch-icon"
+        sizes="144x144"
+        href="/apple-icon-144x144.png"
+      />
+      <link
+        rel="apple-touch-icon"
+        sizes="152x152"
+        href="/apple-icon-152x152.png"
+      />
       <link
         rel="apple-touch-icon"
         sizes="180x180"
@@ -97,6 +108,32 @@ export default {
         sizes="16x16"
         href="/favicon-16x16.png"
       />
+      <link rel="manifest" href="/manifest.json" />
+      <meta name="msapplication-TileColor" content="#ffffff" />
+      <meta name="msapplication-TileImage" content="/ms-icon-144x144.png" />
+
+      <meta name="msapplication-TileColor" content="#ffffff" />
+      <meta name="theme-color" content="#ffffff" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <meta httpEquiv="Content-Language" content="en" />
+      <meta name="description" content="Shaan's Personal Documentation site" />
+      <meta
+        name="og:description"
+        content="Shaan's Personal Documentation site"
+      />
+      <meta
+        name="twitter:card"
+        content="This is Shaan Alam's personal Documentation site that he made for managing his notes related to Web Dev and Programming in general"
+      />
+      <meta
+        name="twitter:image"
+        content="https://photos.smugmug.com/Wallpapers/i-qKBhDbD/0/b9267d3b/X2/HDRshooter-super-ultra-wide-wallpaper-030-X2.jpg"
+      />
+      <meta name="twitter:site:domain" content="shaan-docs.vercel.app" />
+      <meta name="twitter:url" content="https://shaan-docs.vercel.app" />
+      <meta name="og:title" content="Shaan Alam Docs 👨‍💻" />
+      <meta name="og:image" content="https://shaan-docs.vercel.app/og.png" />
+      <meta name="apple-mobile-web-app-title" content="Shaan Alam Docs" />
       <meta name="msapplication-TileImage" content="/ms-icon-144x144.png" />
     </>
   ),
