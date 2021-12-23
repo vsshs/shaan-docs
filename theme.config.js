@@ -2,7 +2,6 @@ export default {
   github: 'https://github.com/shaan-alam',
   docsRepositoryBase: 'https://github.com/shaan-alam/shaan-docs',
   titleSuffix: ' 👨‍💻',
-  floatTOC: false,
   logo: (
     <>
       <span className="mr-2 font-extrabold logo dark">
@@ -55,6 +54,28 @@ export default {
   ),
   head: (
     <>
+      <meta name="msapplication-TileColor" content="#ffffff" />
+      <meta name="theme-color" content="#ffffff" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <meta httpEquiv="Content-Language" content="en" />
+      <meta name="description" content="Shaan's Personal Documentation site" />
+      <meta
+        name="og:description"
+        content="Shaan's Personal Documentation site"
+      />
+      <meta
+        name="twitter:card"
+        content="This is Shaan Alam's personal Documentation site that he made for managing his notes related to Web Dev and Programming in general"
+      />
+      <meta
+        name="twitter:image"
+        content="https://photos.smugmug.com/Wallpapers/i-qKBhDbD/0/b9267d3b/X2/HDRshooter-super-ultra-wide-wallpaper-030-X2.jpg"
+      />
+      <meta name="twitter:site:domain" content="shaan-docs.vercel.app" />
+      <meta name="twitter:url" content="https://shaan-docs.vercel.app" />
+      <meta name="og:title" content="Shaan Alam Docs 👨‍💻" />
+      <meta name="og:image" content="https://shaan-docs.vercel.app/og.png" />
+      <meta name="apple-mobile-web-app-title" content="Shaan Alam Docs" />
       <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png" />
       <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png" />
       <link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png" />
@@ -109,32 +130,6 @@ export default {
         href="/favicon-16x16.png"
       />
       <link rel="manifest" href="/manifest.json" />
-      <meta name="msapplication-TileColor" content="#ffffff" />
-      <meta name="msapplication-TileImage" content="/ms-icon-144x144.png" />
-
-      <meta name="msapplication-TileColor" content="#ffffff" />
-      <meta name="theme-color" content="#ffffff" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <meta httpEquiv="Content-Language" content="en" />
-      <meta name="description" content="Shaan's Personal Documentation site" />
-      <meta
-        name="og:description"
-        content="Shaan's Personal Documentation site"
-      />
-      <meta
-        name="twitter:card"
-        content="This is Shaan Alam's personal Documentation site that he made for managing his notes related to Web Dev and Programming in general"
-      />
-      <meta
-        name="twitter:image"
-        content="https://photos.smugmug.com/Wallpapers/i-qKBhDbD/0/b9267d3b/X2/HDRshooter-super-ultra-wide-wallpaper-030-X2.jpg"
-      />
-      <meta name="twitter:site:domain" content="shaan-docs.vercel.app" />
-      <meta name="twitter:url" content="https://shaan-docs.vercel.app" />
-      <meta name="og:title" content="Shaan Alam Docs 👨‍💻" />
-      <meta name="og:image" content="https://shaan-docs.vercel.app/og.png" />
-      <meta name="apple-mobile-web-app-title" content="Shaan Alam Docs" />
-      <meta name="msapplication-TileImage" content="/ms-icon-144x144.png" />
     </>
   ),
   search: true,

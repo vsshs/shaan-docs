@@ -1,0 +1,44 @@
+---
+title: Getting Started with React + TypeScript
+---
+
+import CodeSnippet from '../../../components/CodeSnippet'
+import Bleed from 'nextra-theme-docs/bleed'
+
+<Bleed>
+![TypeScript + React](https://user-images.githubusercontent.com/48273777/147246090-43bca1aa-459f-4734-95a0-c5109f403fc2.png)
+</Bleed>
+<br />
+# Getting Started
+
+## Creating a React project using TypeScript
+
+Run the following command to create a TypeScript React Project.
+
+<CodeSnippet language="console">
+  {() => `yarn create react-app <app-name> --template-typescript`}
+</CodeSnippet>
+
+## Migrating a Next project from JS to TS
+
+1. Create a simple `Next.js` Project.
+
+<CodeSnippet language="console">
+  {() => `yarn create next-app <app-name>`}
+</CodeSnippet>
+
+2. Install `typescript`, `@types/node` & `@types/react` as a dev dependency.
+
+<CodeSnippet language="console">
+  {() => `yarn add typescript @types/node @types/react -D`}
+</CodeSnippet>
+
+3. Rename the files to `.tsx` (files with jsx) and `.ts` (files without jsx)
+
+![Renaming Screenshot](https://user-images.githubusercontent.com/48273777/147244398-eecf1253-3491-45cd-a8f7-946a99c2f9ae.png)
+
+4. Run `yarn dev`. Next.js will automatically detect TypeScript and generate a `tsconfig.json` file.
+
+5. (Optional). Restart your typescript server inside vscode by `ctrl + shift + P` and then `TypeScript: Restart TS Server`.
+
+![Screenshot from 2021-12-23 18-36-29](https://user-images.githubusercontent.com/48273777/147244784-09123fa9-1fe5-4217-ae1c-ea4dce32e158.png)
