@@ -1,3 +1,51 @@
 import CodeSnippet from '../../components/CodeSnippet'
 
 # Utilities
+
+## 1. Partial
+Partials can be used to make properties on an interface as optional. For example, if we 
+have an existing interface with three properties and we want to create an object with some of
+those properties (not all the properties), then we have to create a new interface or make some 
+of the properties as optionals for doing so.
+
+Instead, we can use Partial utility type in TypeScript which will help us acheive the same.
+
+<CodeSnippet language="ts">
+{() => `interface IProps {
+  prop1: string,
+  prop2: boolean,
+  prop3: number[]
+}\n
+// Object with all the properties.
+const object = {
+  prop1: "Shaan Alam",
+  prop2: true,
+  prop3: [19, 27]
+}\n
+// Object with some of the properties.
+const object2: Partial<IProps> = {
+  prop1: "John Doe",
+  prop3: [34, 56]
+}`}
+</CodeSnippet>
+
+## 2. Omit
+
+We can also omit some properties from an interface using `Omit` utility type.
+
+<CodeSnippet language="ts">
+{() => `interface IProps {
+  prop1: string,
+  prop2: boolean,
+  prop3: number[]
+}
+// To omit a single property
+const object: Omit<IProps, "prop2"> = {
+  prop1: "Shaan Alam",
+  prop3: [21, 78]
+}
+// To omit multiple property
+const object2: Omit<IProps, "prop2" | "prop3"> = {
+  prop1: "Shaan Alam"
+}`}
+</CodeSnippet>
