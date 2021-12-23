@@ -1,2 +1,27 @@
 import CodeSnippet from '../../components/CodeSnippet'
 
+# Generics
+
+Sometimes, we may want to repeat blocks of code for different data types.
+An example of same function with two different data types
+
+<CodeSnippet language="ts">
+{() => `function fun(props: string) {
+  return args;
+}\n
+function fun(props: number) {
+  return args;
+}`}
+
+</CodeSnippet>
+
+We use the same function with two different types. Generics can help us create a more generalized function for different data types
+For example -
+
+<CodeSnippet language="ts">
+{() => `function myFunc<T>(input: T): T {
+  return input
+}\n
+const result = myFunc({ name: 'Shaan Alam' }) // T { name: string }
+const result2 = myFunc({ name: ['Shaan Alam'] }) // T { name: string[]`}
+</CodeSnippet>

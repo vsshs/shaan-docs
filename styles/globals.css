@@ -140,6 +140,7 @@ html.js-focus-visible.dark h3,
 html.js-focus-visible.dark h4,
 html.js-focus-visible.dark h5,
 html.js-focus-visible.dark h6 {
+  font-weight: bold;
   background: #c02425; /* fallback for old browsers */
   background: -webkit-linear-gradient(
     to right,
@@ -162,6 +163,7 @@ html.js-focus-visible.light h3,
 html.js-focus-visible.light h4,
 html.js-focus-visible.light h5,
 html.js-focus-visible.light h6 {
+  font-weight: bold;
   background: #8a2387; /* fallback for old browsers */
   background: -webkit-linear-gradient(
     to right,
