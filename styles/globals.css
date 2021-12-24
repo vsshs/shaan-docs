@@ -73,8 +73,8 @@ html.js-focus-visible.dark #nprogress .peg {
   display: block;
   position: fixed;
   z-index: 1031;
-  top: 20px;
-  left: 80px;
+  top: 25px;
+  left: 250px;
 }
 
 @media screen and (max-width: 960px) {
@@ -208,6 +208,48 @@ html.js-focus-visible.light .logo.dark {
 html.js-focus-visible.dark .logo.light {
   display: none;
 }
+
+html.js-focus-visible.light .logo.light {
+  width: 20%;
+}
+
+html.js-focus-visible.light .logo.light .logo-img.small {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  html.js-focus-visible.light .logo.light .logo-img.small {
+    display: block;
+    width: 100%;
+  }
+
+  html.js-focus-visible.light .logo.light .logo-img {
+    display: none;
+  }
+}
+
+
+html.js-focus-visible.dark .logo.dark {
+  width: 20%;
+}
+
+html.js-focus-visible.dark .logo.dark .logo-img.small {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  html.js-focus-visible.dark .logo.dark .logo-img.small {
+    display: block;
+    width: 100%;
+  }
+
+  html.js-focus-visible.dark .logo.dark .logo-img {
+    display: none;
+  }
+}
+
+
+/* code css */
 
 .token-line .token {
   font-family: 'Cascadia Code', monospace;
