@@ -1,7 +1,7 @@
 export default {
   github: 'https://github.com/shaan-alam',
   docsRepositoryBase: 'https://github.com/shaan-alam/shaan-docs',
-  titleSuffix: '',
+  titleSuffix: ' - Shaan Alam Docs',
   logo: (
     <>
       <span className="mr-2 font-extrabold logo dark">
