@@ -74,12 +74,12 @@ html.js-focus-visible.dark #nprogress .peg {
   position: fixed;
   z-index: 1031;
   top: 25px;
-  left: 250px;
+  left: 200px;
 }
 
 @media screen and (max-width: 960px) {
   #nprogress .spinner {
-    left: 80px;
+    left: 100px;
   }
 }
 
