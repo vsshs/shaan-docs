@@ -1,0 +1,122 @@
+---
+title: Rendering MDX with Next.JS
+---
+
+import CodeSnippet from '../../components/CodeSnippet'
+import Callout from 'nextra-theme-docs/callout'
+
+# Rendering MDX with Next.JS
+
+### Libraries Needed
+<br />
+|Library  |Link |
+|---------|-----|
+|next-mdx-remote|[https://www.npmjs.com/package/next-mdx-remote](https://www.npmjs.com/package/next-mdx-remote)    |
+|gray-matter|[https://www.npmjs.com/package/gray-matter](https://www.npmjs.com/package/gray-matter)     |
+
+
+1. Create MDX files inside `/pages/posts` dir.
+
+2. Inside `getStaticProps` function in `index.tsx` file, we will read the `posts` dir, and then read each file and extract all front-matter from each file using the `gray-matter` library.
+
+<CodeSnippet language="js">
+  {() => `export async function getStaticProps() {
+  // Read the directory
+  const files = await fs.readdir(path.join("pages/posts")); \n
+  // Read each file and extract frontMatter
+  const posts = await Promise.all(
+    files.map(async (file) => {
+      const mdWithMeta = await fs.readFile(
+        path.join("pages/posts", file),
+        "utf-8"
+      );
+      const { data: frontMatter } = matter(mdWithMeta);\n
+      return {
+        frontMatter,
+        slug: file.split(".")[0],
+      };
+    })
+  );\n
+  return {
+    props: {
+      posts,
+    },
+  };
+}
+`}
+</CodeSnippet>
+
+3. Map the `posts` props in the UI like this.
+
+<CodeSnippet language="jsx">
+  {() => `{posts.map((post) => (
+  <Link href={/post-[slug]} key={post.slug}>
+    <a style={{ display: "block" }}>{post.frontMatter.title}</a>
+  </Link>
+))}`}
+</CodeSnippet>
+
+4. Create a `/pages/posts/[slug].tsx` file.
+
+<CodeSnippet language="jsx">
+  {() => `export async function getStaticPaths() {
+  const files = fs.readdirSync(path.join("pages/posts"));
+  // Generating slugs
+  const paths = files.map((filename) => {
+    return {
+      params: {
+        slug: filename.replace(".mdx", ""),
+      },
+    };
+  });\n
+  return {
+    paths,
+    fallback: false,
+  };
+}\n
+export const getStaticProps = async ({ params: { slug } }) => {
+  const markdownWithMeta = await fs.readFileSync(
+    path.join("pages/posts", slug + ".mdx"),
+    "utf8"
+  ); // Read each file
+  const { data: frontMatter, content } = matter(markdownWithMeta); // Extract front-matter
+  const mdxSource = await serialize(content); // Serialize content
+  return {
+    props: {
+      frontMatter,
+      slug,
+      mdxSource,
+    },
+  };
+};
+`}
+</CodeSnippet>
+
+<Callout emoji="💡">
+  ### Note:
+  <div style={{ margin: '1rem 0' }}>
+    `getStaticProps` (Static Generation) - Fetches data at build time{' '}
+  </div>
+  <div style={{ margin: '1rem 0' }}>
+    `getStaticPaths` (Static Generation) - Specify dynamic routes to pre-render
+    pages based on data
+  </div>
+  <div style={{ margin: '1rem 0' }}>`getServerSideProps` (Server side rendering) - Fetches data on each request</div>
+</Callout>
+
+5. Inside the JSX, use `MDXRemote` component to render mdx data.
+
+<CodeSnippet language="jsx">
+  {() => `import { serialize } from "next-mdx-remote/serialize";
+import { MDXRemote } from "next-mdx-remote";\n
+export default function Post(props: any) {
+  return (
+    <div>
+      <div>
+        <MDXRemote {...props.mdxSource} />
+      </div>
+    </div>
+  );
+}
+`}
+</CodeSnippet>
