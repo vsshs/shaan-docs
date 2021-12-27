@@ -1,0 +1,7 @@
+```js
+var ip = req.headers["x-real-ip"] || req.connection.remoteAddress;
+if (ip.substr(0, 7) == "::ffff:") {
+  ip = ip.substr(7);
+  console.log(ip);
+}
+```
