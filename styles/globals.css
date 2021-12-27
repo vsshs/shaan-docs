@@ -1,4 +1,4 @@
-@import url('https://cdn.jsdelivr.net/npm/@xz/fonts@1/serve/cascadia-code.min.css');
+@import url('http://fonts.cdnfonts.com/css/league-mono');
 
 #nprogress {
   pointer-events: none;
@@ -228,7 +228,6 @@ html.js-focus-visible.light .logo.light .logo-img.small {
   }
 }
 
-
 html.js-focus-visible.dark .logo.dark {
   width: 20%;
 }
@@ -248,11 +247,10 @@ html.js-focus-visible.dark .logo.dark .logo-img.small {
   }
 }
 
-
 /* code css */
 
 .token-line .token {
-  font-family: 'Cascadia Code', monospace;
+  font-family: 'League Mono', sans-serif;
 }
 
 .rounded-full {
