@@ -1,0 +1,39 @@
+---
+title: Use Tailwind JIT Mode
+---
+
+import CodeSnippet from '../../components/CodeSnippet'
+
+# Use Tailwind JIT (Just-in-time) Mode
+
+1. Enable JIT mode by adding the `mode: "jit"` config inside `tailwind.config.js`.
+
+<CodeSnippet language="js">
+  {() => `// tailwind.config.js
+module.exports = {
+  mode: 'jit',
+  purge: [
+    // ...
+  ],
+  theme: {
+    // ...
+  }
+    // ...
+}`}
+
+</CodeSnippet>
+
+# Arbitrary Value Support
+
+<CodeSnippet language="html">
+  {() => `<!-- Sizes and positioning -->
+<img class="absolute w-[762px] h-[918px] top-[-325px] right-[62px] md:top-[-400px] md:right-[80px]" src="/crazy-background-image.png">
+
+<!-- Colors -->
+<button class="bg-[#1da1f1]">Share on Twitter</button>
+
+<!-- Complex grids -->
+<div class="grid-cols-[1fr,700px,2fr]">
+  <!-- ... -->
+</div>`}
+</CodeSnippet>
