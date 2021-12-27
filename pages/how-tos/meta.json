@@ -1,4 +1,5 @@
 {
   "render-mdx": "Render MDX with Next.JS",
-  "tailwind-jit-mode": "Use Tailwind JIT Mode"
+  "tailwind-jit-mode": "Use Tailwind JIT Mode",
+  "use-mongo-in-nextjs": "Use Mongo in Next.JS"
 }

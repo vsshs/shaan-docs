@@ -1,0 +1,44 @@
+---
+title: 'Use Mongo in Next.JS'
+---
+
+import CodeSnippet from '../../components/CodeSnippet'
+
+# Use Mongo in Next.JS API routes
+
+1. Install `mongoose`
+2. Create a `mongodb.js` file inside the `/api/` folder and write the mongoose configuration here.
+
+<CodeSnippet language="js">
+  {() => `import mongoose from "mongoose";\n
+const connectDB = (handler) => async (req, res) => {
+  if (mongoose.connections[0].readyState) {
+    return handler(req, res);
+  }\n
+  await mongoose.connect(mongo_uri,
+  {
+    useUnifiedTopology: true,
+    useNewUrlParser: true,
+  });\n
+  return handler(req, res);
+};\n
+export default connectDB
+`}
+
+</CodeSnippet>
+
+3. Now, inside the `index.js` file inside the `/api` folder, add the following.
+
+<CodeSnippet language="js">
+  {() => `import User from "./model/user"; // Your mongoose model
+import connectDB from "./mongodb";\n
+async function handler(req, res) {
+  // Your handler code here...
+}
+export default connectDB(handler);`}
+</CodeSnippet>
+
+`connectDB` function will take the `handler` function and return an async function which will check
+if we already have a mongo connection. If we already have the connection, then we will return the handler function along 
+with the `req` and `res` object, otherwise, we will first establish a mongo connection with mongoDB URI 
+and then return the handler function with `req` and `res` object.
