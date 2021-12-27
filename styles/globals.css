@@ -1,4 +1,4 @@
-
+@import url('https://fonts.googleapis.com/css2?family=Fira+Mono:wght@400;500;700&family=Source+Code+Pro&display=swap');
 #nprogress {
   pointer-events: none;
 }
@@ -249,7 +249,7 @@ html.js-focus-visible.dark .logo.dark .logo-img.small {
 /* code css */
 
 .token-line .token {
-  font-family: 'League Mono', sans-serif;
+  font-family: 'Fira Mono', monospace;
 }
 
 .rounded-full {

@@ -92,10 +92,6 @@ export default {
         href="/favicon-16x16.png"
       />
       <link rel="manifest" href="/manifest.json" />
-      <link
-        rel="stylesheet"
-        href="https://cdn.jsdelivr.net/npm/fontsource-league-mono-wide@4.0.0/500.min.css"
-      ></link>
     </>
   ),
   search: true,
